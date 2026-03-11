@@ -1,0 +1,16 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "elysia": "^1.1.0",
+    "@elysiajs/cors": "^1.1.0",
+    "mongoose": "^8.3.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}
