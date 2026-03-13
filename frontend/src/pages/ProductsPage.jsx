@@ -188,7 +188,6 @@ export default function ProductsPage() {
               { label: "Name *", key: "name", type: "text" },
               { label: "Price *", key: "price", type: "number" },
               { label: "Description", key: "description", type: "text" },
-              { label: "Category", key: "category", type: "text" },
               { label: "Stock Quantity", key: "stock_quantity", type: "number" },
             ].map(({ label, key, type }) => (
               <div key={key} style={{ marginBottom: "14px" }}>
@@ -201,6 +200,27 @@ export default function ProductsPage() {
                 />
               </div>
             ))}
+            <div style={{ marginBottom: "14px" }}>
+            <label style={labelStyle}>Category</label>
+            <select
+              value={form.category}
+              onChange={e => setForm(f => ({ ...f, category: e.target.value }))}
+              style={{ ...inputStyle, width: "100%", boxSizing: "border-box" }}
+            >
+              <option value="">No category</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Food & Beverages">Food & Beverages</option>
+              <option value="Home & Garden">Home & Garden</option>
+              <option value="Sports">Sports</option>
+              <option value="Books">Books</option>
+              <option value="Toys">Toys</option>
+              <option value="Health & Beauty">Health & Beauty</option>
+              <option value="Automotive">Automotive</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+            
             <div style={{ marginBottom: "20px" }}>
               <label style={labelStyle}>Provider</label>
               <select
